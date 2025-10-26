@@ -8,7 +8,7 @@
         </div>
         
         <div class="input-container">
-            <h3 class="font-bold text-lg">Amount (add "-" for expenses)</h3>
+            <h3 class="font-bold text-lg">Amount (Number input, add "-" for expenses)</h3>
             <input placeholder="Enter Amount..." type="number" class="bg-slate-200 rounded-lg w-full h-12 p-4 active:border border-slate-700 text-lg">
         </div>
         

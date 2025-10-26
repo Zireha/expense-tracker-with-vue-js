@@ -1,10 +1,19 @@
 <template>
 <div class="container pl-4">
-    <h3 class="lg">Your Balance</h3>
-    <p class="font-bold text-2xl">Rp200.000,00</p>
+    <h3 class="text-xl pb-2">Your Balance</h3>
+    <p class="font-bold text-4xl">Rp{{ total.toLocaleString("id-ID") }}</p>
 </div>
 </template>
 
-<script>
+<script setup>
 
+import { defineProps } from 'vue';
+
+const props = defineProps({
+  total: {
+    type: Number,
+    required: true
+  }
+});
+  
 </script>
