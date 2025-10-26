@@ -20,17 +20,14 @@
 
                 <div class="end-container flex items-center">
                     <div
-                        class="flex w-0 opacity-0 overflow-hidden transition-all duration-300 group-hover:w-20 group-hover:opacity-100"
+                        class="flex w-0 opacity-0 overflow-hidden transition-all duration-300 group-hover:w-12 group-hover:opacity-100"
                     >
-                        <button class="p-2 hover:bg-stone-200 rounded">
+                        <button @click="deleteTransaction(transaction.id)" class="p-2 hover:bg-stone-200 rounded">
                             <img
                                 src="\src\assets\trash-can.svg"
                                 width="20"
                                 color="red"
                             />
-                        </button>
-                        <button class="p-2 hover:bg-stone-200 rounded">
-                            <img src="\src\assets\pencil.svg" width="20" />
                         </button>
                     </div>
 
@@ -53,6 +50,8 @@
 
 import { defineProps } from 'vue';
 
+const emit = defineEmits(['transactionDeleted'])
+
 const props = defineProps({
   transactions: {
     type: Array,
@@ -64,4 +63,8 @@ const nominalConverter = (amount) =>
     amount < 0
         ? `- Rp${(amount * -1).toLocaleString("id-ID")}`
         : `Rp${amount.toLocaleString("id-ID")}`;
+
+const deleteTransaction = (id) => {
+  emit('transactionDeleted', id);
+}
 </script>
