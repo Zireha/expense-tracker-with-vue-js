@@ -20,7 +20,7 @@
 
                 <div class="end-container flex items-center">
                     <div
-                        class="flex w-0 opacity-0 overflow-hidden transition-all duration-300 group-hover:w-12 group-hover:opacity-100"
+                        class="flex opacity-0 overflow-hidden transition-all duration-300 group-hover:w-12 group-hover:opacity-100"
                     >
                         <button @click="deleteTransaction(transaction.id)" class="p-2 hover:bg-stone-200 rounded">
                             <img
