@@ -1,18 +1,18 @@
 <template>
-    <div class="flex flex-col gap-4 min-h-full items-center md:flex-row">
+    <div class="flex flex-col md:flex md:flex-row justify-between gap-12 mx-auto">
         <div
-            class="flex-col shadow-md p-4 text-center border w-full md:w-1/2 border-transparent rounded-md bg-green-300"
+            class="flex-col shadow-md p-4 text-center border md:w-1/2 border-transparent rounded-md bg-green-300"
         >
             <h3>Income</h3>
-            <p class="font-bold text-lg md:text-xl text-green-950">
+            <p class="font-bold text-xl md:text-2xl text-green-950">
                 + Rp{{ income.toLocaleString("id-ID") }}
             </p>
         </div>
         <div
-            class="flex-col shadow-md p-4 text-center border w-full md:w-1/2 border-transparent rounded-md bg-red-200"
+            class="flex-col shadow-md p-4 text-center border md:w-1/2 border-transparent rounded-md bg-red-200"
         >
             <h3>Expense</h3>
-            <p class="font-bold text-lg md:text-xl text-red-950">
+            <p class="font-bold text-xl md:text-2xl text-red-950">
                 - Rp{{ expenses.toLocaleString("id-ID") }}
             </p>
         </div>
