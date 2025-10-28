@@ -5,7 +5,7 @@
             <li
                 v-for="transaction in transactions"
                 :key="transaction.id"
-                class="group flex items-center bg-stone-100 rounded-lg overflow-hidden shadow-md"
+                class="group flex items-center bg-stone-100 rounded-lg overflow-hidden shadow-md hover:bg-stone-200"
             >
                 <div
                     class="flex-1 flex items-center justify-between pt-4 pl-4 pb-4 pr-2 transition-all duration-300"
