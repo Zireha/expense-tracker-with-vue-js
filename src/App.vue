@@ -82,24 +82,24 @@ const saveTransactionRecordToLocalStorage = () => {
 </script>
 
 <template>
-    <div class="main-container flex justify-center p-12 bg-sky-950">
-        <div class="bg-white p-14 rounded-xl w-5/6">
+    <div id="main-container" class="flex items-start justify-center p-12 bg-sky-950 min-h-screen">
+        <div class="flex flex-col bg-white p-14 rounded-xl max-w-7xl md:w-full gap-8">
             <Header />
             <div
-                class="container mt-4 shadow-lg py-6 bg-blue-950 text-white flex-col align-middle rounded-md"
+                class="shadow-lg py-6 bg-blue-950 text-white flex-col align-middle rounded-md"
             >
                 <Balance :total="total" />
             </div>
-            <div class="container pt-8">
+            <div>
                 <IncomeExpense :income="income" :expenses="expense" />
             </div>
-            <div class="container pt-4">
+            <div>
                 <TransactionList
                     :transactions="transactionRecords"
                     @transactionDeleted="handleTransactionDeleted"
                 />
             </div>
-            <div class="container pt-6">
+            <div>
                 <AddTransaction
                     @transactionSubmitted="handleTransactionSubmitted"
                 />
