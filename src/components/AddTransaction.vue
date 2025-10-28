@@ -1,8 +1,8 @@
 <template>
     <h2 class="font-semibold text-3xl">Add Transaction</h2>
     <form id="form" @submit.prevent="onSubmit">
-        <div class="container pt-8 pb-8">
-            <div class="input-container pb-4">
+        <div id="container " class="pt-8 pb-8 gap-4">
+            <div class="input-container">
                 <h3 class="font-bold text-lg">Expense/Income Text</h3>
                 <input
                     placeholder="Enter title..."

@@ -82,28 +82,34 @@ const saveTransactionRecordToLocalStorage = () => {
 </script>
 
 <template>
-    <div class="main-container flex justify-center p-12 bg-sky-950">
-        <div class="bg-white p-14 rounded-xl w-5/6">
-            <Header />
-            <div
-                class="container mt-4 shadow-lg py-6 bg-blue-950 text-white flex-col align-middle rounded-md"
-            >
-                <Balance :total="total" />
-            </div>
-            <div class="container pt-8">
-                <IncomeExpense :income="income" :expenses="expense" />
-            </div>
-            <div class="container pt-4">
-                <TransactionList
-                    :transactions="transactionRecords"
-                    @transactionDeleted="handleTransactionDeleted"
-                />
-            </div>
-            <div class="container pt-6">
-                <AddTransaction
-                    @transactionSubmitted="handleTransactionSubmitted"
-                />
+    <main class="bg-sky-950 min-h-screen min-w-full flex">
+        <div
+            id="main-container"
+            class="flex min-h-screen min-w-full mx-auto justify-center items-center p-12"
+        >
+            <div id="header-container" class="bg-white p-14 rounded-xl flex flex-col gap-4 md:w-screen">
+                <Header />
+                <div
+                    id="balance-container"
+                    class="shadow-lg py-6 bg-blue-950 text-white flex-col align-middle rounded-md"
+                >
+                    <Balance :total="total" />
+                </div>
+                <div id="income-expense-container">
+                    <IncomeExpense :income="income" :expenses="expense" />
+                </div>
+                <div id="transaction-container">
+                    <TransactionList
+                        :transactions="transactionRecords"
+                        @transactionDeleted="handleTransactionDeleted"
+                    />
+                </div>
+                <div id="add-transaction-container">
+                    <AddTransaction
+                        @transactionSubmitted="handleTransactionSubmitted"
+                    />
+                </div>
             </div>
         </div>
-    </div>
+    </main>
 </template>

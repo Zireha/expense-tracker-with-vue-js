@@ -1,11 +1,11 @@
 <template>
     <h3 class="pt-2 font-semibold text-3xl">History</h3>
-    <div class="container pt-6">
+    <div class="w-full">
         <ul class="space-y-3">
             <li
                 v-for="transaction in transactions"
                 :key="transaction.id"
-                class="group flex items-center bg-stone-100 rounded-lg overflow-hidden shadow-md"
+                class="group flex items-center bg-stone-100 rounded-lg overflow-hidden shadow-md hover:bg-stone-200 md:min-w-fit"
             >
                 <div
                     class="flex-1 flex items-center justify-between pt-4 pl-4 pb-4 pr-2 transition-all duration-300"
@@ -20,7 +20,7 @@
 
                 <div class="end-container flex items-center">
                     <div
-                        class="flex w-0 opacity-0 overflow-hidden transition-all duration-300 group-hover:w-12 group-hover:opacity-100"
+                        class="flex opacity-0 overflow-hidden transition-all duration-300 group-hover:w-12 group-hover:opacity-100"
                     >
                         <button @click="deleteTransaction(transaction.id)" class="p-2 hover:bg-stone-200 rounded">
                             <img
