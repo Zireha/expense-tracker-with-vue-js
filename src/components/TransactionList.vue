@@ -1,6 +1,6 @@
 <template>
     <h3 class="pt-2 font-semibold text-3xl">History</h3>
-    <div class="w-full">
+    <div class="pt-6">
         <ul class="space-y-3">
             <li
                 v-for="transaction in transactions"
