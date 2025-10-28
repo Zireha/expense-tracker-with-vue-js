@@ -105,5 +105,5 @@ const saveTransactionRecordToLocalStorage = () => {
                 />
             </div>
         </div>
-    </div>
+    </main>
 </template>
