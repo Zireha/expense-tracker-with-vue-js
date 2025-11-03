@@ -52,6 +52,7 @@ const handleTransactionSubmitted = (transactionData) => {
         id: uniqueIdGenerator(),
         text: transactionData.text,
         amount: transactionData.amount,
+        date: new Date().toLocaleDateString()
     });
 
     saveTransactionRecordToLocalStorage();
@@ -79,6 +80,7 @@ const saveTransactionRecordToLocalStorage = () => {
         JSON.stringify(transactionRecords.value),
     );
 };
+
 </script>
 
 <template>
@@ -88,7 +90,7 @@ const saveTransactionRecordToLocalStorage = () => {
             class="flex items-start justify-center p-12 bg-sky-950 min-h-screen"
         >
             <div
-                class="flex flex-col bg-white p-14 rounded-xl max-w-7xl md:w-full gap-8"
+                class="flex flex-col bg-white p-14 rounded-xl max-w-7xl lg:w-full gap-8"
             >
                 <Header />
                 <div

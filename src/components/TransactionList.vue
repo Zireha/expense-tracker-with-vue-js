@@ -12,7 +12,12 @@
                 >
                     <span class="text-lg font-medium">{{
                         transaction.text
+                    }}
+                    <span class="text-sm font-medium text-zinc-500">{{
+                        transaction.date
                     }}</span>
+                    </span>
+                    
                     <span class="text-lg font-semibold">
                         {{ nominalConverter(transaction.amount) }}
                     </span>
