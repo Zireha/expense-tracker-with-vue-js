@@ -5,10 +5,10 @@
             <li
                 v-for="transaction in transactions"
                 :key="transaction.id"
-                class="group flex items-center bg-stone-100 rounded-lg overflow-hidden shadow-md hover:bg-stone-200"
+                class="group flex items-center justify-between bg-stone-100 rounded-lg overflow-hidden shadow-md hover:bg-stone-200 h-full"
             >
                 <div
-                    class="flex-1 flex items-center justify-between pt-4 pl-4 pb-4 pr-2 transition-all duration-300"
+                    class="flex flex-col items-start md:flex-1 md:flex md:justify-between pt-4 pl-4 pb-4 pr-2 transition-all duration-300"
                 >
                     <span class="text-lg font-medium">{{
                         transaction.text
@@ -43,7 +43,7 @@
                                 ? 'bg-red-600'
                                 : 'bg-green-600'
                         "
-                        class="text-white px-2 h-full min-h-[60px] transition-colors"
+                        class="text-white px-2 h-full min-h-[120px] transition-colors"
                     ></div>
                 </div>
             </li>
