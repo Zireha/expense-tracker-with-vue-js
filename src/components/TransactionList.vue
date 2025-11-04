@@ -5,20 +5,20 @@
             <li
                 v-for="transaction in transactions"
                 :key="transaction.id"
-                class="group flex items-center justify-between bg-stone-100 rounded-lg overflow-hidden shadow-md hover:bg-stone-200 h-full"
-            >
+                class="group flex items-stretch justify-between bg-stone-100 rounded-lg overflow-hidden shadow-md hover:bg-stone-200 h-full"
+                >
                 <div
                     class="flex flex-col items-start md:flex-1 md:flex md:justify-between pt-4 pl-4 pb-4 pr-2 transition-all duration-300"
                 >
-                    <span class="text-lg font-medium">{{
+                    <span class="text-md font-medium">{{
                         transaction.text
                     }}
+                    </span>
                     <span class="text-sm font-medium text-zinc-500">{{
                         transaction.date
                     }}</span>
-                    </span>
                     
-                    <span class="text-lg font-semibold">
+                    <span class="text-md font-semibold">
                         {{ nominalConverter(transaction.amount) }}
                     </span>
                 </div>
@@ -43,8 +43,8 @@
                                 ? 'bg-red-600'
                                 : 'bg-green-600'
                         "
-                        class="text-white px-2 h-full min-h-[120px] transition-colors"
-                    ></div>
+                        class="text-white px-2 h-full transition-colors"
+                        ></div>
                 </div>
             </li>
         </ul>

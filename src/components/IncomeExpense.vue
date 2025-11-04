@@ -4,7 +4,7 @@
             class="flex-col shadow-md p-4 md:text-center border lg:w-1/2 border-transparent rounded-md bg-green-300"
         >
             <h3>Income</h3>
-            <p class="font-bold text-xl lg:text-2xl text-green-950">
+            <p class="font-bold text-2xl md:text-4xl text-green-950">
                 + Rp{{ income.toLocaleString("id-ID") }}
             </p>
         </div>
@@ -12,7 +12,7 @@
             class="flex-col shadow-md p-4 md:text-center border lg:w-1/2 border-transparent rounded-md bg-red-200"
         >
             <h3>Expense</h3>
-            <p class="font-bold text-xl lg:text-2xl text-red-950">
+            <p class="font-bold text-2xl md:text-4xl text-red-950">
                 - Rp{{ expenses.toLocaleString("id-ID") }}
             </p>
         </div>
