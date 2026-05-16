@@ -10,6 +10,7 @@
                 <div
                     class="flex flex-col items-start md:flex-1 md:flex md:justify-between pt-4 pl-4 pb-4 pr-2 transition-all duration-300"
                 >
+                <div>Budi Setang</div>
                     <span class="text-md font-medium">{{
                         transaction.text
                     }}
